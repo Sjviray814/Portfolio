@@ -1,0 +1,6 @@
+Nav Bar:
+- About me
+- My Projects
+- Extracurriculars
+- Outside School
+- Contact me
