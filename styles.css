@@ -1,6 +1,7 @@
 html{
     background-color: #202020;  
     padding-top:1vh;
+    scroll-behavior: smooth;
 }
 .white{
     color:#F3F3F3;
@@ -184,4 +185,13 @@ section{
 }
 .card-title{
     font-family: 'Coolvetica', sans-serif; 
+}
+.card:nth-child(2){
+    transition-delay: 200ms;
+}
+.card:nth-child(3){
+    transition-delay: 400ms;
+}
+.card:nth-child(4){
+    transition-delay: 600ms;
 }

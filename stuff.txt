@@ -8,11 +8,10 @@ Nav Bar:
 
 
 Projects:
-- College Scraper
+- College Scraper ***
 - Genshin Crit Calculator
 - Theology Game
-- Calculator
-- Tier List
-- 2 Player Pong
-- Click thing
-- Ball Clicker
+- Calculator ***
+- Tier List ***
+- 2 Player Pong ***
+- Ball Clicker ***
