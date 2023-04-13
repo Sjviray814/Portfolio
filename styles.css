@@ -195,3 +195,9 @@ section{
 .card:nth-child(4){
     transition-delay: 600ms;
 }
+.card:nth-child(5){
+    transition-delay: 800ms;
+}
+.card:nth-child(6){
+    transition-delay: 1000ms;
+}
