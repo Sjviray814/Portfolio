@@ -70,7 +70,7 @@ html{
  #nav-icon3{
     width: 45px;
     height: 30px;
-    position: absolute;
+    position: fixed;
     margin: 2vh 2vh;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -161,9 +161,27 @@ html{
 
   /* My Projects */
 
-#projects{
+#project-description{
     margin-top: 70vh;
 }
 section{
     min-height: 100vh;
+}
+/* I had to do this manually because tailwind is bad */
+/* @media (min-width: 768px) {  */
+    .project-grid{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+/* } */
+/* @media (max-width: 830px) { 
+    .project-grid{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+} */
+
+.card button, .card-description{
+    font-family: 'SF Mono', sans-serif; 
+}
+.card-title{
+    font-family: 'Coolvetica', sans-serif; 
 }

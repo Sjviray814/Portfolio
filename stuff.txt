@@ -4,3 +4,15 @@ Nav Bar:
 - Extracurriculars
 - Outside School
 - Contact me
+
+
+
+Projects:
+- College Scraper
+- Genshin Crit Calculator
+- Theology Game
+- Calculator
+- Tier List
+- 2 Player Pong
+- Click thing
+- Ball Clicker
