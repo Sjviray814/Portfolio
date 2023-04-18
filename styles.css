@@ -180,6 +180,9 @@ section{
     }
 } */
 
+.gradient-card{
+    background-image: linear-gradient(to right top, #008793, #a8eb12);
+}
 .card button, .card-description{
     font-family: 'SF Mono', sans-serif; 
 }
@@ -206,4 +209,7 @@ section{
 }
 .card:nth-child(8){
     transition-delay: 1400ms;
+}
+.card:nth-child(9){
+    transition-delay: 1600ms;
 }
