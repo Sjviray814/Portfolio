@@ -8,7 +8,7 @@ function beginningAnimation() {
     i++;
     setTimeout(beginningAnimation, speed);
   }
-  else{
+  else {
     document.getElementById("hello").classList.toggle('fadein');
     document.getElementById("description").classList.toggle('fadein');
 
@@ -17,21 +17,28 @@ function beginningAnimation() {
 
 
 
-window.onload = function(){
-    beginningAnimation();
-    
+window.onload = function() {
+  beginningAnimation();
+
 }
 
+var cards = document.querySelectorAll('.card');
+
+[...cards].forEach((card) => {
+  card.addEventListener('click', function() {
+    card.classList.toggle('active');
+  });
+});
 
 
 
 
 // Code copy pasted from codepen for the hamburger menu:
-$(document).ready(function(){
-	$('#nav-icon3').click(function(){
-		$(this).toggleClass('open');
+$(document).ready(function() {
+  $('#nav-icon3').click(function() {
+    $(this).toggleClass('open');
     document.getElementById("links").classList.contains('hidden') ? document.getElementById("links").classList.replace('hidden', 'grid') : document.getElementById("links").classList.replace('grid', 'hidden');
-	});
+  });
 });
 
 
@@ -39,8 +46,8 @@ $(document).ready(function(){
 // Code copied from fireship video, does animations when elements load onto screen: https://www.youtube.com/watch?v=T33NN_pPeNI
 
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) =>{
-    if(entry.isIntersecting){
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
       entry.target.classList.add('show');
     }
     // Uncomment this to make animations play forever

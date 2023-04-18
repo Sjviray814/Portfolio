@@ -213,3 +213,39 @@ section{
 .card:nth-child(9){
     transition-delay: 1600ms;
 }
+.card:nth-child(10){
+    transition-delay: 1800ms;
+}
+
+
+@media (max-width: 768px) { 
+    .card{
+        transition-delay: 0;
+    }
+}
+
+#buttons, #card-words{
+  opacity: 0;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  pointer-events: none;
+}
+.card:hover #buttons{
+  opacity:100%;
+  backdrop-filter: blur(12px);
+  pointer-events: auto;
+}
+.card:hover #card-words{
+  opacity:100%;
+  backdrop-filter: blur(12px);
+}
+.card:focus #card-words{
+  opacity: 100%;
+  backdrop-filter: blur(12px);
+}
+.card:focus #buttons{
+  opacity: 100%;
+  backdrop-filter: blur(12px);
+  pointer-events: auto;
+}
