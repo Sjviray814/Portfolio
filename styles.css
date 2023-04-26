@@ -23,6 +23,14 @@ html{
 
 /*  Actual Styles: */
 
+/* Loader */
+.loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /* Text in about me */
 #hello{
     opacity:0;
@@ -58,12 +66,17 @@ html{
     top:0;
     right:0;
     background-color: #0F0F0F;
+    opacity:0;
+    transition: opacity 1.5s; 
 }
 #nav a{
     font-family: 'Coolvetica', sans-serif;   
 }
 #nav a:hover{
     font-weight: bold;
+}
+#nav.fadein{
+    opacity:1;
 }
 
 /* Hamburger Icon copy pasted from codepen */
@@ -163,7 +176,7 @@ html{
   /* My Projects */
 
 #project-description{
-    margin-top: 50vh;
+    margin-top: 60vh;
 }
 section{
     min-height: 100vh;
@@ -222,4 +235,29 @@ section{
     .card{
         transition-delay: 0;
     }
+}
+
+
+@media (min-width: 1500px) {
+    .extra-img{
+        max-width: 10vw;
+        max-height: 10vw; 
+        object-fit: cover;
+    }
+}
+@media (max-width: 1500px) {
+    .extra-img{
+        max-width: 60vw;
+        margin-bottom: 3%;
+        max-height: 20vw; 
+        object-fit: cover;
+    }
+}
+
+.extra{
+    max-width: 70%;
+}
+
+#extracurriculars-description{
+    margin-top: 40vh;
 }

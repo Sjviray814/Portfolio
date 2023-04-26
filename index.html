@@ -16,6 +16,13 @@
 
 <body>
 
+
+  <!-- Loader -->
+
+  <img src="assets/loader.svg" alt="Loading..." class="loader fixed"srcset="">
+
+
+
   <!-- Heading/Animation -->
 
   <div class="hide white text-3xl xl:text-left text-center xl:ml-64" id="hello">Hello! My name is...</div>
@@ -40,7 +47,7 @@
     <div class="hide white text-7xl xl:text-left text-center xl:ml-64 leading-snug tracking-wide"
       id="project-description">My Projects</div>
 
-    <div class="project-grid grid gap-4 mt-20 mx-8 content-center">
+    <div class="project-grid grid gap-4 mt-12 mx-8 content-center">
 
 
       <div class="card hide rounded-2xl bg-[url('assets/pong.png')] bg-cover drop-shadow-lg" id="card1">
@@ -255,10 +262,58 @@
 
 
   <!-- Extracurriculars -->
-  <section id="">
-    <div class="hide white md:text-7xl text-5xl xl:text-left text-center xl:ml-64 leading-snug tracking-wide font-bold"
+  <section class=""id="">
+    <div class="hide white md:text-7xl text-6xl text-center xxl:mx-64 leading-snug tracking-wide font-bold"
       id="extracurriculars-description">
       Extracurriculars
+    </div>
+
+    <div class="extra-grid grid xxl:mt-24 mt-12  justify-items-center gap-12">
+
+
+      <div class="extra flex bg-slate-800 p-8 rounded-2xl items-center flex-col lg:flex-row">
+        <img src="assets/golf.jpeg" class="extra-img mx-8 rounded-2xl lg:aspect-square aspect-[10/3]">
+          <div class="extra-words flex flex-col justify-center">
+            <div class="title white text-5xl font-bold text-left" >Golf</div>
+            <div class="extra-caption white text-xl mt-8">I started playing golf when I was 5 years old. My father used to bring me along with him to the golf course and I instantly developed a love for the game.  I have played in over 200 junior golf tournaments over a period of 9 years and have been on my school's varsity golf team for 4 years. </div>
+          </div>
+      </div>
+
+      <div class="extra flex bg-slate-800 p-8 rounded-2xl items-center flex-col lg:flex-row">
+        <img src="assets/cubing.jpeg" class="extra-img mx-8 rounded-2xl lg:aspect-square aspect-[10/3]">
+          <div class="extra-words flex flex-col justify-center">
+            <div class="title white text-5xl font-bold text-left" >Cubing</div>
+            <div class="extra-caption white text-xl mt-8"> I began competitive Rubik's Cube Solving in 2015, when my parents bought me a cube for Christmas.  I have been to 13 total competitions and have completed 381 official solves.  At one point, I was ranked top 300 in the world and top 100 in the USA for my 2 main events.   </div>
+          </div>
+      </div>
+
+      <div class="extra flex bg-slate-800 p-8 rounded-2xl items-center flex-col lg:flex-row">
+        <img src="assets/robotics.jpeg" class="extra-img mx-8 rounded-2xl lg:aspect-square aspect-[10/3]">
+          <div class="extra-words flex flex-col justify-center">
+            <div class="title white text-5xl font-bold text-left" >Robotics</div>
+            <div class="extra-caption white text-xl mt-8"> I have been a programmer on my school's robotics team for all 4 years of my high school career.  In 2021 and 2022, I was the lead programmer on my school's freshman and JV robotics teams.  In 2023, I was the backup programmer on my school's varsity FRC team and this year, I will be the lead programmer on the team. </div>
+          </div>
+      </div>
+
+      <div class="extra flex bg-slate-800 p-8 rounded-2xl items-center flex-col lg:flex-row">
+        <img src="assets/robotics.jpeg" class="extra-img mx-8 rounded-2xl lg:aspect-square aspect-[10/3]">
+          <div class="extra-words flex flex-col justify-center">
+            <div class="title white text-5xl font-bold text-left" >Media</div>
+            <div class="extra-caption white text-xl mt-8"> I have been a programmer on my school's robotics team for all 4 years of my high school career.  In 2021 and 2022, I was the lead programmer on my school's freshman and JV robotics teams.  In 2023, I was the backup programmer on my school's varsity FRC team and this year, I will be the lead programmer on the team. </div>
+          </div>
+      </div>
+
+      <div class="extra flex bg-slate-800 p-8 rounded-2xl items-center flex-col lg:flex-row">
+        <img src="assets/violin.png" class="extra-img mx-8 rounded-2xl lg:aspect-square aspect-[10/3]">
+          <div class="extra-words flex flex-col justify-center">
+            <div class="title white text-5xl font-bold text-left" >Music</div>
+            <div class="extra-caption white text-xl mt-8"> I have been playing piano for 11 years, and I have been playing violin for 4. I have been a member of my school's string orchestra for all 4 years of high school and have played in numerous piano recitals.  My school's string orchestra plays at masses, has concerts and other events where the school needs us to play music. </div>
+          </div>
+      </div>
+
+
+
+
     </div>
   </section>
 
@@ -283,7 +338,7 @@
 
 
   <!-- Nav Bar -->
-  <nav class="rounded-s-2xl fixed" id="nav">
+  <nav class="rounded-s-2xl fixed hide" id="nav">
     <div id="links" class="xl:w-fit xl:h-16 xl:my-8 xl:text-lg xl:content-center xl:justify-center xl:grid xl:grid-flow-col
     grid-flow-row justify-items-center grid hidden
     ">

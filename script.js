@@ -11,16 +11,18 @@ function beginningAnimation() {
   else {
     document.getElementById("hello").classList.toggle('fadein');
     document.getElementById("description").classList.toggle('fadein');
-
+    document.getElementById("nav").classList.toggle('fadein');
   }
 }
 
 
 
-window.onload = function() {
-  beginningAnimation();
+// window.onload = function() {
+//   // $('.loader').hide();
+  
 
-}
+// }
+
 
 var cards = document.querySelectorAll('.card');
 
@@ -35,10 +37,12 @@ var cards = document.querySelectorAll('.card');
 
 // Code copy pasted from codepen for the hamburger menu:
 $(document).ready(function() {
+  $('.loader').hide();
   $('#nav-icon3').click(function() {
     $(this).toggleClass('open');
     document.getElementById("links").classList.contains('hidden') ? document.getElementById("links").classList.replace('hidden', 'grid') : document.getElementById("links").classList.replace('grid', 'hidden');
   });
+  beginningAnimation();
 });
 
 
