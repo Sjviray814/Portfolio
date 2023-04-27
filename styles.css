@@ -21,6 +21,11 @@ html{
     font-family: 'Coolvetica', sans-serif;
 }
 
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
 /*  Actual Styles: */
 
 /* Loader */
@@ -55,6 +60,15 @@ html{
     font-family: 'SF Mono', sans-serif; 
 }
 #description.fadein{
+    opacity:1;
+}
+#scroll{
+    opacity:0;
+    transition: opacity 1.5s; 
+    margin-top: 5vh;
+    font-family: 'SF Mono', sans-serif; 
+}
+#scroll.fadein{
     opacity:1;
 }
 
@@ -167,6 +181,12 @@ html{
     transform: translateX(-10%);
     transition: all 1s;
   }
+  .hide-extra{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(50%);
+    transition: all 1s;
+  }
   .show{
     opacity: 1;
     transform: translateX(0);
@@ -258,6 +278,4 @@ section{
     max-width: 70%;
 }
 
-#extracurriculars-description{
-    margin-top: 40vh;
-}
+

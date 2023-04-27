@@ -12,6 +12,8 @@ function beginningAnimation() {
     document.getElementById("hello").classList.toggle('fadein');
     document.getElementById("description").classList.toggle('fadein');
     document.getElementById("nav").classList.toggle('fadein');
+    document.getElementById("scroll").classList.toggle('fadein');
+    enableScroll();
   }
 }
 
@@ -19,7 +21,7 @@ function beginningAnimation() {
 
 // window.onload = function() {
 //   // $('.loader').hide();
-  
+
 
 // }
 
@@ -37,13 +39,19 @@ var cards = document.querySelectorAll('.card');
 
 // Code copy pasted from codepen for the hamburger menu:
 $(document).ready(function() {
-  $('.loader').hide();
-  $('#nav-icon3').click(function() {
-    $(this).toggleClass('open');
-    document.getElementById("links").classList.contains('hidden') ? document.getElementById("links").classList.replace('hidden', 'grid') : document.getElementById("links").classList.replace('grid', 'hidden');
-  });
-  beginningAnimation();
+  $(this).scrollTop(0);
+  disableScroll();
+  setTimeout(function() {
+    $('.loader').fadeOut(200);
+    $('#nav-icon3').click(function() {
+      $(this).toggleClass('open');
+      document.getElementById("links").classList.contains('hidden') ? document.getElementById("links").classList.replace('hidden', 'grid') : document.getElementById("links").classList.replace('grid', 'hidden');
+    });
+    beginningAnimation();
+  }, 1500);
 });
+
+
 
 
 
@@ -62,4 +70,20 @@ const observer = new IntersectionObserver((entries) => {
 })
 
 const hiddenElements = document.querySelectorAll('.hide');
+const hiddenExtra = document.querySelectorAll('.hide-extra');
+hiddenExtra.forEach((el) => observer.observe(el));
 hiddenElements.forEach((el) => observer.observe(el));
+
+
+
+// Code for disabling scroll
+
+function disableScroll() {
+  $('body').addClass('stop-scrolling');
+  $('body').bind('touchmove', function(e) { e.preventDefault() });
+}
+
+function enableScroll() {
+  $('body').removeClass('stop-scrolling');
+  $('body').unbind('touchmove');
+}
