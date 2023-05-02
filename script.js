@@ -20,7 +20,7 @@ function beginningAnimation() {
 
 
 // window.onload = function() {
-//   // $('.loader').hide();
+//   $('body').scrollTop(0);
 
 
 // }
@@ -39,7 +39,10 @@ var cards = document.querySelectorAll('.card');
 
 // Code copy pasted from codepen for the hamburger menu:
 $(document).ready(function() {
-  $(this).scrollTop(0);
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+  window.scrollTo(0, 0);
   disableScroll();
   setTimeout(function() {
     $('.loader').fadeOut(200);
@@ -49,6 +52,7 @@ $(document).ready(function() {
     });
     beginningAnimation();
   }, 1500);
+
 });
 
 
@@ -71,7 +75,9 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll('.hide');
 const hiddenExtra = document.querySelectorAll('.hide-extra');
+const hiddenRight = document.querySelectorAll('.hide-right');
 hiddenExtra.forEach((el) => observer.observe(el));
+hiddenRight.forEach((el) => observer.observe(el));
 hiddenElements.forEach((el) => observer.observe(el));
 
 
@@ -87,3 +93,5 @@ function enableScroll() {
   $('body').removeClass('stop-scrolling');
   $('body').unbind('touchmove');
 }
+
+
