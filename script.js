@@ -44,17 +44,23 @@ $(document).ready(function() {
   }
   window.scrollTo(0, 0);
   disableScroll();
-  setTimeout(function() {
-    $('.loader').fadeOut(200);
-    $('#nav-icon3').click(function() {
-      $(this).toggleClass('open');
-      document.getElementById("links").classList.contains('hidden') ? document.getElementById("links").classList.replace('hidden', 'grid') : document.getElementById("links").classList.replace('grid', 'hidden');
-    });
-    beginningAnimation();
-  }, 1500);
 
 });
 
+document.addEventListener('readystatechange', event => {
+
+  // When window loaded ( external resources are loaded too- `css`,`src`, etc...) 
+  if (event.target.readyState === "complete") {
+    setTimeout(function() {
+      $('.loader').fadeOut(200);
+      $('#nav-icon3').click(function() {
+        $(this).toggleClass('open');
+        document.getElementById("links").classList.contains('hidden') ? document.getElementById("links").classList.replace('hidden', 'grid') : document.getElementById("links").classList.replace('grid', 'hidden');
+      });
+      beginningAnimation();
+    }, 1500);
+  }
+});
 
 
 
