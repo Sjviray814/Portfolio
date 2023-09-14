@@ -228,6 +228,9 @@ body{
   .show{
     transition: none;
   }
+    .hide-ml{
+    transition: none;
+  }
 }
   @media(min-width: 800px){
     .hide{
@@ -243,6 +246,12 @@ body{
     transition: all 1s;
   }
   .hide-extra{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(50%);
+    transition: all 1s;
+  }
+  .hide-ml{
     opacity: 0;
     filter: blur(5px);
     transform: translateY(50%);
@@ -280,6 +289,11 @@ section{
 }
 .card button, .card-description{
     font-family: 'SF Mono', sans-serif; 
+    color: white;
+}
+
+#fruit-description{
+  color: black;
 }
 .card-title{
     font-family: 'Coolvetica', sans-serif; 
@@ -403,6 +417,7 @@ contact:nth-child(4){
 
 .award-grid{
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  max-width: 99vw;
 }
 
 #award-note{
@@ -424,8 +439,41 @@ figure:nth-child(4){
   color: #D4AF37;
 }
 #silver{
-  color: #4f4f4f;
+  color: #bac1cc;
 }
 #bronze{
   color: #CD7F32;
+}
+
+
+
+
+
+
+/* 10 weeks of ML */
+
+.bg-dark-purple{
+  background-color: #042f2e;
+}
+
+#ml-description{
+}
+
+.element{
+  background-color: white;
+  width: 100px;
+  height: 100px;
+}
+
+.hide-ml:nth-child(2){
+  transition-delay: 200ms;
+}
+.hide-ml:nth-child(3){
+  transition-delay: 400ms;
+}
+.hide-ml:nth-child(4){
+  transition-delay: 600ms;
+}
+.hide-ml:nth-child(5){
+  transition-delay: 800ms;
 }

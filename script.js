@@ -1,6 +1,7 @@
 var i = 0;
 var txt = 'Stephen Viray.'; /* The text */
 var speed = 150; /* The speed/duration of the effect in milliseconds */
+let waitBeforeLoading = 1000;  // the time before starting the beginning animation
 
 function beginningAnimation() {
   if (i < txt.length) {
@@ -58,7 +59,7 @@ document.addEventListener('readystatechange', event => {
         document.getElementById("links").classList.contains('hidden') ? document.getElementById("links").classList.replace('hidden', 'grid') : document.getElementById("links").classList.replace('grid', 'hidden');
       });
       beginningAnimation();
-    }, 1500);
+    }, waitBeforeLoading);
   }
 });
 
@@ -82,6 +83,8 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hide');
 const hiddenExtra = document.querySelectorAll('.hide-extra');
 const hiddenRight = document.querySelectorAll('.hide-right');
+const hiddenMl = document.querySelectorAll('.hide-ml');
+hiddenMl.forEach((el) => observer.observe(el));
 hiddenExtra.forEach((el) => observer.observe(el));
 hiddenRight.forEach((el) => observer.observe(el));
 hiddenElements.forEach((el) => observer.observe(el));
@@ -99,5 +102,4 @@ function enableScroll() {
   $('body').removeClass('stop-scrolling');
   $('body').unbind('touchmove');
 }
-
 
